@@ -29,7 +29,7 @@ async function deleteMatchingFiles(pattern) {
 async function updateDocument(latestScreenshot) {
     const documentFilePath = './pages/_document.js'
     const content = await fs.promises.readFile(documentFilePath, 'utf8');
-    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/homepage\/main\/assets\/img\/${latestScreenshot}?raw=true" />`);
+    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/homepage\/main\/assets\/img\/${latestScreenshot}" />`);
 
     await fs.promises.writeFile(documentFilePath, updatedContent);
 }
@@ -85,7 +85,7 @@ async function takeScreenshot() {
 // Main function to run the script
 async function main() {
 
-    console.log("Deleting old screenshorts");
+    console.log("Deleting old screenshots");
     const pattern = './public/assets/img/website_screenshot_*';
     await deleteMatchingFiles(pattern);
 
