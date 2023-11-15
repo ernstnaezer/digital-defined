@@ -29,7 +29,7 @@ async function deleteMatchingFiles(pattern) {
 async function updateDocument(latestScreenshot) {
     const documentFilePath = './pages/_document.js'
     const content = await fs.promises.readFile(documentFilePath, 'utf8');
-    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/homepage\/main\/assets\/img\/${latestScreenshot}" />`);
+    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/${latestScreenshot}" />`);
 
     await fs.promises.writeFile(documentFilePath, updatedContent);
 }
