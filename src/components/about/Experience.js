@@ -2,7 +2,7 @@ const experiencesData = [
   {
     date: "Nov 2023 - Current⠀",
     designation: "Founder",
-    company: "Freelance",
+    company: "Digital Defined",
   },
   {
     date: "Jan 2022 - Nov 2023",

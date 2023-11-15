@@ -50,9 +50,9 @@ const Intro = () => {
                 <span>
                   <a
                     className="text-[#767676] transition-all duration-300 hover:text-black"
-                    href="mailto:email@ernstnaezer.nl"
+                    href="mailto:ernst@digital-defined.nl"
                   >
-                    email@ernstnaezer.nl
+                    ernst@digital-defined.nl
                   </a>
                 </span>
               </li>
@@ -97,7 +97,7 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   KVK:
                 </span>
-                <span> -pending- </span>
+                <span> 91977215 </span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
