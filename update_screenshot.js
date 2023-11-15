@@ -26,10 +26,10 @@ async function deleteMatchingFiles(pattern) {
   }
 }
   
-async function updateDocument(latestScreenshot) {
+async function updateDocument(screenshotFilename) {
     const documentFilePath = './pages/_document.js'
     const content = await fs.promises.readFile(documentFilePath, 'utf8');
-    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/${latestScreenshot}" />`);
+    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/public\/assets\/img\/${screenshotFilename}" />`);
 
     await fs.promises.writeFile(documentFilePath, updatedContent);
 }
@@ -73,10 +73,10 @@ async function takeScreenshot() {
     await new Promise(resolve => setTimeout(resolve, 5000));
 
     // Generate a filename with the current date and time
-    const filename = `./public/assets/img/website_screenshot_${formatDate()}.png`;
+    const filename = `website_screenshot_${formatDate()}.png`;
 
     // Take a screenshot
-    await page.screenshot({ path: filename });
+    await page.screenshot({ path: `./public/assets/img/${filename}`});
 
     await browser.close();
     return filename;

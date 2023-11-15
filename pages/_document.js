@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="author" content="Ernst Naezer" />
         <meta property="og:title" content="Ernst Naezer" />
         <meta property="og:description" content="Available as Freelance Engineering Lead - let's build." />
-        <meta property="og:image" content="https://raw.githubusercontent.com/ernstnaezer/digital-defined/main/public/assets/img/website_screenshot_2023-11-15T20-18-43.png" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/ernstnaezer/digital-defined/main/public/assets/img/website_screenshot_2023-11-15T20-39-19.png" />
         <meta property="og:url" content="https://digital-defined.nl/" />
         <meta property="og:type" content="website" />
         <link
