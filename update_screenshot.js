@@ -29,7 +29,7 @@ async function deleteMatchingFiles(pattern) {
 async function updateDocument(latestScreenshot) {
     const documentFilePath = './pages/_document.js'
     const content = await fs.promises.readFile(documentFilePath, 'utf8');
-    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/homepage\/main\/assets\/img\/${latestScreenshot}" />`);
+    const updatedContent = content.replace(/<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/digital-defined\/main\/assets\/img\/[^"]+" \/>/, `<meta property="og:image" content="https:\/\/raw\.githubusercontent\.com\/ernstnaezer\/homepage\/main\/assets\/img\/${latestScreenshot}?raw=true" />`);
 
     await fs.promises.writeFile(documentFilePath, updatedContent);
 }
@@ -64,7 +64,7 @@ async function takeScreenshot() {
     const page = await browser.newPage();
     
     // Set viewport size for mobile
-    await page.setViewport({ width: 500, height: 850 });
+    await page.setViewport({ width: 500, height: 525 });
 
     // Navigate to your local server
     await page.goto('http://localhost:3000');
