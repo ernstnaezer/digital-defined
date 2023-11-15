@@ -25,8 +25,8 @@ const Home = () => {
                 data-img-url="assets/img/slider/ernst.jpg"
               />
             </div>
-            <div className="details ml-[80px]">
-              <h3 className="name text-[55px] font-extrabold uppercase mb-[14px]">
+            <div className="details ml-[80px] mb-[25px]">
+              <h3 className="name text-[55px] font-extrabold uppercase">
                 Ernst Naezer
               </h3>
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
@@ -38,7 +38,7 @@ const Home = () => {
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px] tokyo_tm_call_to_action">
                 Reach out via <a href="tel:+31 6 30 65 77 08">+31 6 30 65 77 08</a> or <a onClick={() => navChange("contact")} href="#contact">send me a message.</a>
               </p>
-              <div className="social w-full float-left">
+              <div className="social w-full float-left pb-[90px]">
                 <ul className="m-0 list-none">
                   {socialIcon.map((item, idx) => (
                     <li className="mr-[8px] inline-block" key={idx}>
