@@ -1,0 +1,5 @@
+.DS_Store
+out/
+node_modules/
+update_screenshot.js
+update_website.sh
