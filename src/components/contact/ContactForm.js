@@ -18,7 +18,7 @@ const ContactForm = () => {
     } else {
       emailjs
         .send(
-          "service_sj3b8ef", // service id
+          "service_yfpokx1", // service id
           "template_gwra644", // template id
           mailData,
           "9ucA9BkZU-nq_-Sm5" // public api
